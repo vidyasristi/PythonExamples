@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="22b1dd88-e38e-4894-97ea-54c58fb3134c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/PycharmProjects.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AWS/LogGrpMetrics.py" beforeDir="false" afterPath="$PROJECT_DIR$/AWS/LogGrpMetrics.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1ZXP4UhDunobFqxXjEcrIBD7fxS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunManager" selected="Python.JsontoCsv">
+    <configuration name="CloudWatchLogGroups" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="BasicPython" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AWS" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AWS/CloudWatchLogGroups.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ClouudWatchAlarm" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="BasicPython" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AWS" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AWS/ClouudWatchAlarm.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Ec2InstanceList" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="BasicPython" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AWS" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AWS/Ec2InstanceList.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="JsontoCsv" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="BasicPython" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LeetCode" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LeetCode/JsontoCsv.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="file" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="BasicPython" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LeetCode" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LeetCode/file.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.JsontoCsv" />
+        <item itemvalue="Python.CloudWatchLogGroups" />
+        <item itemvalue="Python.ClouudWatchAlarm" />
+        <item itemvalue="Python.Ec2InstanceList" />
+        <item itemvalue="Python.file" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="22b1dd88-e38e-4894-97ea-54c58fb3134c" name="Default Changelist" comment="" />
+      <created>1584982275256</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584982275256</updated>
+      <workItem from="1584982342742" duration="568000" />
+      <workItem from="1584985081487" duration="13782000" />
+      <workItem from="1585808013826" duration="999000" />
+      <workItem from="1588107854060" duration="14085000" />
+      <workItem from="1588572052557" duration="61000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="507" y="184" key="FileChooserDialogImpl" timestamp="1584985152264">
+      <screen x="0" y="23" width="1440" height="801" />
+    </state>
+    <state x="507" y="184" key="FileChooserDialogImpl/0.23.1440.801@0.23.1440.801" timestamp="1584985152264" />
+    <state width="1360" height="239" key="GridCell.Tab.0.bottom" timestamp="1588572023161">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state width="1360" height="239" key="GridCell.Tab.0.bottom/0.23.1440.797@0.23.1440.797" timestamp="1588572023161" />
+    <state width="1358" height="192" key="GridCell.Tab.0.bottom/0.23.1440.801@0.23.1440.801" timestamp="1584990819735" />
+    <state width="1360" height="239" key="GridCell.Tab.0.center" timestamp="1588572023161">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state width="1360" height="239" key="GridCell.Tab.0.center/0.23.1440.797@0.23.1440.797" timestamp="1588572023161" />
+    <state width="1358" height="192" key="GridCell.Tab.0.center/0.23.1440.801@0.23.1440.801" timestamp="1584990819734" />
+    <state width="1360" height="239" key="GridCell.Tab.0.left" timestamp="1588572023161">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state width="1360" height="239" key="GridCell.Tab.0.left/0.23.1440.797@0.23.1440.797" timestamp="1588572023161" />
+    <state width="1358" height="192" key="GridCell.Tab.0.left/0.23.1440.801@0.23.1440.801" timestamp="1584990819733" />
+    <state width="1360" height="239" key="GridCell.Tab.0.right" timestamp="1588572023161">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state width="1360" height="239" key="GridCell.Tab.0.right/0.23.1440.797@0.23.1440.797" timestamp="1588572023161" />
+    <state width="1358" height="192" key="GridCell.Tab.0.right/0.23.1440.801@0.23.1440.801" timestamp="1584990819734" />
+    <state width="1360" height="239" key="GridCell.Tab.1.bottom" timestamp="1588572023162">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state width="1360" height="239" key="GridCell.Tab.1.bottom/0.23.1440.797@0.23.1440.797" timestamp="1588572023162" />
+    <state width="1358" height="239" key="GridCell.Tab.1.bottom/0.23.1440.801@0.23.1440.801" timestamp="1584988020657" />
+    <state width="1360" height="239" key="GridCell.Tab.1.center" timestamp="1588572023162">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state width="1360" height="239" key="GridCell.Tab.1.center/0.23.1440.797@0.23.1440.797" timestamp="1588572023162" />
+    <state width="1358" height="239" key="GridCell.Tab.1.center/0.23.1440.801@0.23.1440.801" timestamp="1584988020657" />
+    <state width="1360" height="239" key="GridCell.Tab.1.left" timestamp="1588572023161">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state width="1360" height="239" key="GridCell.Tab.1.left/0.23.1440.797@0.23.1440.797" timestamp="1588572023161" />
+    <state width="1358" height="239" key="GridCell.Tab.1.left/0.23.1440.801@0.23.1440.801" timestamp="1584988020656" />
+    <state width="1360" height="239" key="GridCell.Tab.1.right" timestamp="1588572023162">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state width="1360" height="239" key="GridCell.Tab.1.right/0.23.1440.797@0.23.1440.797" timestamp="1588572023162" />
+    <state width="1358" height="239" key="GridCell.Tab.1.right/0.23.1440.801@0.23.1440.801" timestamp="1584988020657" />
+    <state x="221" y="61" key="SettingsEditor" timestamp="1588572002224">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state x="221" y="61" key="SettingsEditor/0.23.1440.797@0.23.1440.797" timestamp="1588572002224" />
+    <state x="221" y="61" key="SettingsEditor/0.23.1440.801@0.23.1440.801" timestamp="1584985160031" />
+    <state x="397" y="254" key="com.intellij.ide.util.TipDialog" timestamp="1584982349428">
+      <screen x="0" y="23" width="1440" height="798" />
+    </state>
+    <state x="397" y="254" key="com.intellij.ide.util.TipDialog/0.23.1440.798@0.23.1440.798" timestamp="1584982349428" />
+    <state x="378" y="59" width="683" height="729" key="find.popup" timestamp="1588571532840">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state x="378" y="59" width="683" height="729" key="find.popup/0.23.1440.797@0.23.1440.797" timestamp="1588571532840" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/LeetCode/RemDup.py</url>
+          <line>6</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/LeetCode/RemDup.py</url>
+          <line>13</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/LeetCode/RemDup.py</url>
+          <line>29</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/LeetCode/RemDup.py</url>
+          <line>30</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="test_list[i]" language="Python" />
+        <watch expression="test_list[i-1]" language="Python" />
+        <watch expression="test_list[len_]" language="Python" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/BasicPython$Practise1.coverage" NAME="Practise1 Coverage Results" MODIFIED="1585003304096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
+    <SUITE FILE_PATH="coverage/BasicPython$Practise2.coverage" NAME="Practise2 Coverage Results" MODIFIED="1585004127896" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
+    <SUITE FILE_PATH="coverage/BasicPython$JsontoCsv.coverage" NAME="JsontoCsv Coverage Results" MODIFIED="1588138451486" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
+    <SUITE FILE_PATH="coverage/BasicPython$RemDup.coverage" NAME="RemDup Coverage Results" MODIFIED="1585002444388" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
+    <SUITE FILE_PATH="coverage/BasicPython$Ec2InstanceList.coverage" NAME="Ec2InstanceList Coverage Results" MODIFIED="1588116883108" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AWS" />
+    <SUITE FILE_PATH="coverage/BasicPython$Practise3.coverage" NAME="Practise3 Coverage Results" MODIFIED="1585065536483" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
+    <SUITE FILE_PATH="coverage/BasicPython$Basic1.coverage" NAME="Basic1 Coverage Results" MODIFIED="1584989709634" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
+    <SUITE FILE_PATH="coverage/BasicPython$file.coverage" NAME="file Coverage Results" MODIFIED="1585068678455" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
+    <SUITE FILE_PATH="coverage/BasicPython$ClouudWatchAlarm.coverage" NAME="ClouudWatchAlarm Coverage Results" MODIFIED="1588118097709" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AWS" />
+    <SUITE FILE_PATH="coverage/BasicPython$CloudWatchLogGroups.coverage" NAME="CloudWatchLogGroups Coverage Results" MODIFIED="1588122167543" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AWS" />
+  </component>
+</project>
