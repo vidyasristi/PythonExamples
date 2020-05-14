@@ -1,0 +1,47 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  sam-app
+
+  Sample SAM Template for sam-app
+
+Globals:
+  Function:
+    Timeout: 3
+
+Resources:
+#  LambdaPermissionCloudWatchLogs:
+#    Type: AWS::Lambda::Permission
+#    Properties:
+#      FunctionName: !GetAtt HelloWorldFunction.Arn
+#      Action: lambda:InvokeFunction
+#      Principal: logs.amazonaws.com
+
+#  SubscrptionFileter:
+#    Type: AWS::Logs::SubscriptionFilter
+#    Properties:
+#      DestinationArn: !GetAtt HelloWorldFunction.Arn
+#      FilterPattern: 'END'
+#      LogGroupName: '/aws/lambda/basicPython'
+
+  HelloWorldFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: hello_world/
+      Handler: app.lambda_handler
+      Runtime: python3.8
+      FunctionName: 'DmsFunction'
+      Events:
+        HelloWorld:
+          Type: CloudWatchLogs
+          Properties:
+            FilterPattern: 'END'
+            LogGroupName: '/aws/lambda/basicPython'
+
+Outputs:
+  HelloWorldFunction:
+    Description: "Hello World Lambda Function ARN"
+    Value: !GetAtt HelloWorldFunction.Arn
+  HelloWorldFunctionIamRole:
+    Description: "Implicit IAM Role created for Hello World function"
+    Value: !GetAtt HelloWorldFunctionRole.Arn
