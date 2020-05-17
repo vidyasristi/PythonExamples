@@ -2,31 +2,45 @@ import json
 import boto3
 import zlib
 from base64 import b64decode
+import os
 
 
 def lambda_handler(event, context):
     client = boto3.client('cloudwatch')
+    # decoding the event(which is the log message matching the filter)
     decodedEvent = zlib.decompress(b64decode(event['awslogs']['data']), 16 + zlib.MAX_WBITS).decode("utf-8")
-    # decodedJson = json.load(decodedEvent)
-    # logStreamName = decodedJson['logStream']
-    print(decodedEvent)
+    decodedEventJson = json.loads(decodedEvent)
+    replicationTaskName = decodedEventJson["logStream"].split('dms-task-')[1]
+    alarmName = 'AWS_fm~DMS~' + replicationTaskName + '~errorLogs'
+    metricFilterName = replicationTaskName + '_errorLogs'
     filteredAlarms = client.describe_alarms(
-        AlarmNamePrefix='Final',
+        AlarmNamePrefix=alarmName,
         AlarmTypes=['MetricAlarm'])
-
+    # to check if the alarm is present for the given task
     if len(filteredAlarms['MetricAlarms']) == 0:
-        filteredMetrics = listMetrics(client, 'CustomMetric', 'TemplateMetric11', 'SFJGJQQE11234X111')
-        if filteredMetrics['Metrics'] == 0:
+        filteredMetrics = listMetrics(client, 'CustomMetric', metricFilterName, replicationTaskName)
+        # to check if the metric is present for the given task
+        if len(filteredMetrics['Metrics']) == 0:
+            # to process if the metric and alarm are not present
             print("Metric and alarm not found. Creating both.")
-            putMetricData(client, 'CustomMetric', 'TemplateMetric11', 'SFJGJQQE11234X111')
-            putMetricAlarm(client, 'FinalAlarm', 'TemplateMetric11', 'CustomMetric')
-            putMetricData(client, 'CustomMetric', 'TemplateMetric11', 'SFJGJQQE11234X111')
+            # to create metric
+            putMetricData(client, 'CustomMetric', metricFilterName, replicationTaskName)
+            # to create alarm
+            putMetricAlarm(client, alarmName, metricFilterName, 'CustomMetric', replicationTaskName)
+            # to trigger alarm
+            putMetricData(client, 'CustomMetric', metricFilterName, replicationTaskName)
         else:
+            # process if metric is present
             print("Alarm not found. Creating!!!")
-            putMetricAlarm(client, 'FinalAlarm', 'TemplateMetric11', 'CustomMetric')
-            putMetricData(client, 'CustomMetric', 'TemplateMetric11', 'SFJGJQQE11234X111')
+            # create alarm
+            putMetricAlarm(client, alarmName, metricFilterName, 'CustomMetric', replicationTaskName)
+            #trigger alarm
+            putMetricData(client, 'CustomMetric', metricFilterName, replicationTaskName)
     else:
-        putMetricData(client, 'CustomMetric', 'TemplateMetric11', 'SFJGJQQE11234X111')
+        # if metric,alarm  are present
+        print("Triggering Alarm!!!")
+        # trigger alarm
+        putMetricData(client, 'CustomMetric', metricFilterName, replicationTaskName)
 
     return {
         "statusCode": 200,
@@ -36,6 +50,7 @@ def lambda_handler(event, context):
     }
 
 
+# method to trigger an alarm
 def putMetricData(client, metricNamespace, metricName, replicationTaskName):
     return client.put_metric_data(
         Namespace=metricNamespace,
@@ -59,7 +74,8 @@ def putMetricData(client, metricNamespace, metricName, replicationTaskName):
             }])
 
 
-def putMetricAlarm(client, alarmName, metricName, metricNamespace):
+# method to create an alarm
+def putMetricAlarm(client, alarmName, metricName, metricNamespace, replicationTaskName):
     return client.put_metric_alarm(
         AlarmName=alarmName,
         ComparisonOperator='GreaterThanOrEqualToThreshold',
@@ -76,12 +92,13 @@ def putMetricAlarm(client, alarmName, metricName, metricNamespace):
         Dimensions=[
             {
                 'Name': 'ReplicationTaskName',
-                'Value': 'SFJGJQQE11234X111'
+                'Value': replicationTaskName
             }
         ],
         AlarmDescription='Task alarm')
 
 
+# method to list the metrics of a given task based on service,namespace and custom metric name
 def listMetrics(client, metricNamespace, metricName, replicationTaskName):
     return client.list_metrics(
         Namespace=metricNamespace,
@@ -94,4 +111,8 @@ def listMetrics(client, metricNamespace, metricName, replicationTaskName):
 
 
 if __name__ == '__main__':
-    lambda_handler({}, {})
+    fileDir = os.path.dirname(os.path.realpath('__file__'))
+    event_file = os.path.join(fileDir, '../events/event.json')
+    with open(event_file) as json_file:
+        data = json.load(json_file)
+        lambda_handler(data, {})
