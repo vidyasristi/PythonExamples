@@ -1,36 +1,80 @@
 import boto3
-from datetime import date, datetime
+import sys
+from botocore.exceptions import ClientError as botoErr
 
 
-def pauseRedshiftResume(clustername):
+def ResumeSchedule(action, clusterName, scheduleName, iamRoleArn, cronEntry):
     client = boto3.client('redshift')
-    client.create_scheduled_action(
-        ScheduledActionName='RedshiftResume',
-        TargetAction={
+    if not clusterName or not scheduleName or not iamRoleArn or not cronEntry:
+        sys.exit(2)
+    if str(action).lower() == 'create':
+        try:
+            client.describe_clusters(ClusterIdentifier=clusterName)
+            client.create_scheduled_action(
+                ScheduledActionName=scheduleName,
+                TargetAction={
+                    'ResumeCluster': {
+                        'ClusterIdentifier': clusterName
+                    }},
+                Schedule=cronEntry,
+                IamRole=iamRoleArn,
+                Enable=True
+            )
+        except botoErr as error:
+            print('my error ' + error.response['Error']['Message'])
+    elif str(action).lower() == 'delete':
+        DeleteSchedule(scheduleName)
+    else:
+        print('Invalid Action')
 
-            'ResumeCluster': {
-                'ClusterIdentifier': clustername
-            }},
-        Schedule='cron(00 12 ? * MON-FRI *)',
-        IamRole='arn:aws:iam::464420198474:role/redshift_scheduler',
-        # StartTime=datetime(2020, 5, 8),
-        # EndTime=datetime(2020, 5, 9),
-        Enable=True
-    )
 
+def ResizeSchedule(action, clusterName, scheduleName, iamRoleArn, cronEntry, nodeType, isClassicresize, resizeToNodes):
     client = boto3.client('redshift')
-    client.create_scheduled_action(
-        ScheduledActionName='RedshiftPause',
-        TargetAction={
+    if not clusterName or not scheduleName or not iamRoleArn or not cronEntry:
+        sys.exit(2)
+    if str(action).lower() == 'create':
+        try:
+            client.describe_clusters(ClusterIdentifier=clusterName)
+            client.create_scheduled_action(
+                ScheduledActionName=scheduleName,
+                TargetAction={
+                    'ResizeCluster': {
+                        'ClusterIdentifier': clusterName,
+                        'NodeType': nodeType,
+                        'NumberOfNodes': resizeToNodes,
+                        'Classic': isClassicresize
+                    }},
+                Schedule=cronEntry,
+                IamRole=iamRoleArn,
+                Enable=True
+            )
+        except botoErr as error:
+            print('my error ' + error.response['Error']['Message'])
+    elif str(action).lower() == 'delete':
+        DeleteSchedule(scheduleName)
+    else:
+        print('Invalid Action')
 
-            'PauseCluster': {
-                'ClusterIdentifier': clustername
-            }},
-        Schedule='cron(00 02 ? * TUE-SAT *)',
-        IamRole='arn:aws:iam::464420198474:role/redshift_scheduler',
-        # StartTime=datetime(2020, 5, 8),
-        # EndTime=datetime(2020, 5, 9),
-        Enable=True
-    )
 
-pauseRedshiftResume('redshift-cluster-1')
+def DeleteSchedule(scheduleName):
+    client = boto3.client('redshift')
+    try:
+        client.delete_scheduled_action(
+            ScheduledActionName=scheduleName, )
+    except botoErr as error:
+        print('my error ' + error.response['Error']['Message'])
+
+# cronEntry = 'cron(00 12 ? * MON-FRI *)'
+# iamRoleArn = 'arn:aws:iam::464420198474:role/redshift_scheduler'
+# scheduleName='RedshiftPause'
+# clustername='redshift-cluster-1'
+
+#(action, clusterName, scheduleName, iamRoleArn, cronEntry, nodeType, isClassicresize, resizeToNodes):
+
+ResizeSchedule('create', 'redshift-cluster-1', 'RedshiftResizedown', 'arn:aws:iam::464420198474:role/redshift_scheduler',
+               'cron(00 12 ? * MON-FRI *)',
+               'dc2.large',bool('a'),1)
+# ResumeSchedule('create', 'redshift-cluster-1', 'RedshiftResume3', 'arn:aws:iam::464420198474:role/redshift_scheduler',
+# 'cron(TUE-FRI *)')
+
+# DeleteSchedule('Vidya')
